@@ -23,6 +23,8 @@ phases:
       - git add todo_app.yaml
       - "git commit -m 'ci: update image to '$IMAGE_TAG' [skip ci]' || echo 'No changes to commit'"
       - git push origin HEAD:main
+      - git fetch origin main
+      - git rebase origin/main
 artifacts:
   files:
     - todo_app.yaml
