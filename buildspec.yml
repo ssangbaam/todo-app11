@@ -22,9 +22,9 @@ phases:
       - git remote set-url origin https://$GITHUB_TOKEN@github.com/ssangbaam/todo-app11.git
       - git add todo_app.yaml
       - "git commit -m 'ci: update image to '$IMAGE_TAG' [skip ci]' || echo 'No changes to commit'"
-      - git push origin HEAD:main
       - git fetch origin main
       - git rebase origin/main
+      - git push origin HEAD:main
 artifacts:
   files:
     - todo_app.yaml
