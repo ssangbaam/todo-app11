@@ -1,0 +1,4 @@
+resources:
+  - todo_app.yaml
+  - todo_svc.yaml
+

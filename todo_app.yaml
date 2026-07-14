@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app11
+  labels:
+    app: todo-app11
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: todo-app11
+  template:
+    metadata:
+      labels:
+        app: todo-app11
+    spec:
+      imagePullSecrets:
+      - name: ecr-secret
+      containers:
+      - name: todo-app11
+        image: 121531024010.dkr.ecr.ap-northeast-2.amazonaws.com/todo-app11:latest
+        ports:
+        - containerPort: 5000

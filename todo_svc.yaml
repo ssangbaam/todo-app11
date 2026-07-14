@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-app11-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: todo-app11
+  ports:
+    - protocol: TCP
+      port: 8105
+      targetPort: 5000
+
